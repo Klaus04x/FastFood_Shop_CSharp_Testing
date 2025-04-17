@@ -1,0 +1,78 @@
+﻿@model DoAnWeb_Nhom3.Models.NGUOIDUNG
+
+@{
+    ViewBag.Title = "Dangky";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đăng ký tài khoản</h2>
+
+@using (Html.BeginForm("Dangky", "User", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HOTEN, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HOTEN, new { htmlAttributes = new { @class = "form-control", @maxlength = "50" } })
+                <span class="field-validation-error text-danger" data-valmsg-for="HOTEN" data-valmsg-replace="true" id="HOTEN-error">
+                    @(ViewData.ModelState["HOTEN"]?.Errors.FirstOrDefault()?.ErrorMessage ?? "")
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EMAIL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control", @maxlength = "100", @type = "email" } })
+                <span class="field-validation-error text-danger" data-valmsg-for="EMAIL" data-valmsg-replace="true" id="EMAIL-error">
+                    @(ViewData.ModelState["EMAIL"]?.Errors.FirstOrDefault()?.ErrorMessage ?? "")
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DIENTHOAI, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DIENTHOAI, new { htmlAttributes = new { @class = "form-control", @maxlength = "100", @type = "tel", @pattern = "[0-9]{10}" } })
+                <span class="field-validation-error text-danger" data-valmsg-for="DIENTHOAI" data-valmsg-replace="true" id="DIENTHOAI-error">
+                    @(ViewData.ModelState["DIENTHOAI"]?.Errors.FirstOrDefault()?.ErrorMessage ?? "")
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MATKHAU, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MATKHAU, new { htmlAttributes = new { @class = "form-control", @maxlength = "50", @type = "password" } })
+                <span class="field-validation-error text-danger" data-valmsg-for="MATKHAU" data-valmsg-replace="true" id="MATKHAU-error">
+                    @(ViewData.ModelState["MATKHAU"]?.Errors.FirstOrDefault()?.ErrorMessage ?? "")
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DIACHI, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DIACHI, new { htmlAttributes = new { @class = "form-control", @maxlength = "100" } })
+                <span class="field-validation-error text-danger" data-valmsg-for="DIACHI" data-valmsg-replace="true" id="DIACHI-error">
+                    @(ViewData.ModelState["DIACHI"]?.Errors.FirstOrDefault()?.ErrorMessage ?? "")
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Đăng ký" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
