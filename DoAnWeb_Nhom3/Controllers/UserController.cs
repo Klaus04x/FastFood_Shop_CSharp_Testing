@@ -1,4 +1,6 @@
-﻿using DoAnWeb_Nhom3.Models;
+﻿// DoAnWeb_Nhom3/Controllers/UserController.cs
+using DoAnWeb_Nhom3.Models;
+using DoAnWeb_Nhom3.Repositories;
 using System;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
@@ -10,7 +12,16 @@ namespace DoAnWeb_Nhom3.Controllers
 {
     public class UserController : Controller
     {
-        private DoAnWeb_Nhom_3Entities1 db = new DoAnWeb_Nhom_3Entities1();
+        private readonly IUserRepository _userRepository;
+
+        public UserController() : this(new UserRepository())
+        {
+        }
+
+        public UserController(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
 
         // GET: User/Dangky
         public ActionResult Dangky()
@@ -28,22 +39,27 @@ namespace DoAnWeb_Nhom3.Controllers
                 try
                 {
                     // Tăng mã người dùng lên
-                    var maMax = db.NGUOIDUNGs.Max(n => (int?)n.MANGUOIDUNG) ?? 0;
-                    nguoidung.MANGUOIDUNG = maMax + 1;
+                    nguoidung.MANGUOIDUNG = _userRepository.GetMaxUserId() + 1;
 
                     // Mặc định quyền khách hàng (IDQUYEN = 1)
                     nguoidung.IDQUYEN = 1;
 
+                    // Kiểm tra email trùng
+                    if (_userRepository.EmailExists(nguoidung.EMAIL))
+                    {
+                        ModelState.AddModelError("EMAIL", "Email đã được sử dụng. Vui lòng chọn email khác.");
+                        return View(nguoidung);
+                    }
+
                     // Thêm người dùng mới
-                    db.NGUOIDUNGs.Add(nguoidung);
-                    db.SaveChanges();
+                    _userRepository.Add(nguoidung);
+                    if (!_userRepository.SaveChanges())
+                    {
+                        throw new Exception("Lỗi khi lưu vào database.");
+                    }
 
                     // Chuyển hướng đến trang đăng nhập
                     return RedirectToAction("Dangnhap");
-                }
-                catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("UNIQUE") == true)
-                {
-                    ModelState.AddModelError("EMAIL", "Email đã được sử dụng. Vui lòng chọn email khác.");
                 }
                 catch (DbEntityValidationException ex)
                 {
@@ -87,7 +103,7 @@ namespace DoAnWeb_Nhom3.Controllers
                 if (!Regex.IsMatch(model.EMAIL, emailPattern))
                 {
                     ModelState.AddModelError("EMAIL", "Định dạng email không hợp lệ");
-                    return View(model); // Trả về view ngay nếu email không hợp lệ
+                    return View(model);
                 }
             }
 
@@ -95,7 +111,7 @@ namespace DoAnWeb_Nhom3.Controllers
             if (!string.IsNullOrEmpty(model.MATKHAU) && model.MATKHAU.Length < 8)
             {
                 ModelState.AddModelError("MATKHAU", "Mật khẩu phải có ít nhất 8 ký tự");
-                return View(model); // Trả về view ngay nếu mật khẩu không hợp lệ
+                return View(model);
             }
 
             if (ModelState.IsValid)
@@ -104,12 +120,12 @@ namespace DoAnWeb_Nhom3.Controllers
                 model.EMAIL = model.EMAIL?.Trim();
                 model.MATKHAU = model.MATKHAU?.Trim();
 
-                var islogin = db.NGUOIDUNGs.SingleOrDefault(x => x.EMAIL.Equals(model.EMAIL) && x.MATKHAU.Equals(model.MATKHAU));
+                var islogin = _userRepository.GetByEmailAndPassword(model.EMAIL, model.MATKHAU);
 
                 if (islogin != null && islogin.IDQUYEN == 2)
                 {
                     Session["Admin"] = islogin;
-                    return RedirectToAction("Index", "Admin/SANPHAMs");
+                    return RedirectToAction("Index", "SANPHAMs", new { area = "Admin" });
                 }
                 else if (islogin != null && islogin.IDQUYEN == 1)
                 {
@@ -131,15 +147,6 @@ namespace DoAnWeb_Nhom3.Controllers
             Session["use"] = null;
             Session["GioHang"] = null;
             return RedirectToAction("Index", "Home");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

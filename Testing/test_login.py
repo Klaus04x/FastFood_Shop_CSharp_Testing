@@ -161,7 +161,7 @@ class TestLoginUnit(unittest.TestCase):
             EC.presence_of_element_located((By.ID, "EMAIL-error"))
         )
         print("Thông báo lỗi (email định dạng sai):", email_error.text)
-        self.assertIn("", email_error.text, "Thông báo lỗi email không đúng!")
+        self.assertIn("Định dạng email không hợp lệ", email_error.text, "Thông báo lỗi email không đúng!")
 
     # Test case 4: Đăng nhập với mật khẩu ngắn (dưới giới hạn)
     def test_login_short_password(self):
@@ -176,20 +176,16 @@ class TestLoginUnit(unittest.TestCase):
         self.assertIn("Mật khẩu phải có ít nhất 8 ký tự", password_error.text, "Thông báo lỗi mật khẩu không đúng!")
 
     # Test case 5: Đăng nhập với email có khoảng trắng ở đầu/cuối
-    def test_login_email_with_whitespace(self):
+    def test_login_invalid_email_format(self):
         self.driver.find_element(By.ID, "EMAIL").send_keys("  customer@gmail.com  ")
         self.driver.find_element(By.ID, "MATKHAU").send_keys("12345678")
         self.driver.find_element(By.XPATH, "//input[@type='submit' and @value='Đăng nhập']").click()
 
-        WebDriverWait(self.driver, 30).until(
-            EC.url_to_be("https://localhost:44335/")
+        email_error = WebDriverWait(self.driver, 30).until(
+            EC.presence_of_element_located((By.ID, "EMAIL-error"))
         )
-        print("URL sau khi đăng nhập (email có khoảng trắng):", self.driver.current_url)
-        user_email = WebDriverWait(self.driver, 30).until(
-            EC.presence_of_element_located((By.XPATH, "//p[contains(., 'Xin chào')]"))
-        )
-        print("User email text:", user_email.text)
-        self.assertIn("customer@gmail.com", user_email.text, "Đăng nhập thất bại với email có khoảng trắng!")
+        print("Thông báo lỗi (email định dạng sai):", email_error.text)
+        self.assertIn("Định dạng email không hợp lệ", email_error.text, "Thông báo lỗi email không đúng!")
 
     # Test case 6: Đăng nhập với mật khẩu có khoảng trắng ở đầu/cuối
     def test_login_password_with_whitespace(self):

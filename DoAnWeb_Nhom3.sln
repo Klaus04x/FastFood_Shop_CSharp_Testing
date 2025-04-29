@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31025.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnWeb_Nhom3", "DoAnWeb_Nhom3\DoAnWeb_Nhom3.csproj", "{F463ED0D-5026-4822-9DE3-AC0965E99D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnWeb_Nhom3Tests", "DoAnWeb_Nhom3Tests\DoAnWeb_Nhom3Tests.csproj", "{BAA365FC-6AA9-441A-A45A-79EBC45AB3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnWeb_Nhom3Tests1", "DoAnWeb_Nhom3Tests1\DoAnWeb_Nhom3Tests1.csproj", "{0E14F001-28A3-42FE-B316-ECA33770A903}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F463ED0D-5026-4822-9DE3-AC0965E99D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F463ED0D-5026-4822-9DE3-AC0965E99D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F463ED0D-5026-4822-9DE3-AC0965E99D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA365FC-6AA9-441A-A45A-79EBC45AB3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA365FC-6AA9-441A-A45A-79EBC45AB3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA365FC-6AA9-441A-A45A-79EBC45AB3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA365FC-6AA9-441A-A45A-79EBC45AB3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E14F001-28A3-42FE-B316-ECA33770A903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E14F001-28A3-42FE-B316-ECA33770A903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E14F001-28A3-42FE-B316-ECA33770A903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E14F001-28A3-42FE-B316-ECA33770A903}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
