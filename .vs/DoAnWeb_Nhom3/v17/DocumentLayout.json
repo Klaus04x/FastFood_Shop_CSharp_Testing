@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\",
+  "WorkspaceRootPath": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F463ED0D-5026-4822-9DE3-AC0965E99D57}|DoAnWeb_Nhom3\\DoAnWeb_Nhom3.csproj|c:\\users\\admin\\source\\repos\\fastfood_csharp_demo\\doanweb_nhom3\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0E14F001-28A3-42FE-B316-ECA33770A903}|DoAnWeb_Nhom3Tests1\\DoAnWeb_Nhom3Tests1.csproj|d:\\study\\testing\\fastfood_shop_csharp_testing\\doanweb_nhom3tests1\\controllers\\usercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E14F001-28A3-42FE-B316-ECA33770A903}|DoAnWeb_Nhom3Tests1\\DoAnWeb_Nhom3Tests1.csproj|solutionrelative:doanweb_nhom3tests1\\controllers\\usercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F463ED0D-5026-4822-9DE3-AC0965E99D57}|DoAnWeb_Nhom3\\DoAnWeb_Nhom3.csproj|D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\doanweb_nhom3\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F463ED0D-5026-4822-9DE3-AC0965E99D57}|DoAnWeb_Nhom3\\DoAnWeb_Nhom3.csproj|solutionrelative:doanweb_nhom3\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\Models\\LoginModelTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\Models\\LoginModelTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TestProject\\Models\\LoginModelTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\DoAnWeb_Nhom3.Tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\DoAnWeb_Nhom3.Tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TestProject\\DoAnWeb_Nhom3.Tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\MSTestSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\MSTestSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TestProject\\MSTestSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -31,54 +35,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\DoAnWeb_Nhom3\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "DoAnWeb_Nhom3\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\DoAnWeb_Nhom3\\Controllers\\UserController.cs",
-              "RelativeToolTip": "DoAnWeb_Nhom3\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAkwGAAAAAgAAAAAAAAAA==",
+              "Title": "UserControllerTests.cs",
+              "DocumentMoniker": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\DoAnWeb_Nhom3Tests1\\Controllers\\UserControllerTests.cs",
+              "RelativeDocumentMoniker": "DoAnWeb_Nhom3Tests1\\Controllers\\UserControllerTests.cs",
+              "ToolTip": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\DoAnWeb_Nhom3Tests1\\Controllers\\UserControllerTests.cs",
+              "RelativeToolTip": "DoAnWeb_Nhom3Tests1\\Controllers\\UserControllerTests.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAiwCIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:14:38.247Z",
+              "WhenOpened": "2025-05-14T18:08:40.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LoginModelTests.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\Models\\LoginModelTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\Models\\LoginModelTests.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\Models\\LoginModelTests.cs",
-              "RelativeToolTip": "TestProject\\Models\\LoginModelTests.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAgwHAAAAABAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\DoAnWeb_Nhom3\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "DoAnWeb_Nhom3\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\DoAnWeb_Nhom3\\Controllers\\UserController.cs",
+              "RelativeToolTip": "DoAnWeb_Nhom3\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAAGUAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:10:13.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T17:14:38.247Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DoAnWeb_Nhom3.Tests.csproj",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\DoAnWeb_Nhom3.Tests.csproj",
-              "RelativeDocumentMoniker": "TestProject\\DoAnWeb_Nhom3.Tests.csproj",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\DoAnWeb_Nhom3.Tests.csproj",
-              "RelativeToolTip": "TestProject\\DoAnWeb_Nhom3.Tests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-27T17:09:11.259Z",
-              "EditorCaption": ""
+              "Title": "LoginModelTests.cs",
+              "DocumentMoniker": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\Models\\LoginModelTests.cs",
+              "RelativeDocumentMoniker": "TestProject\\Models\\LoginModelTests.cs",
+              "ToolTip": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\Models\\LoginModelTests.cs",
+              "RelativeToolTip": "TestProject\\Models\\LoginModelTests.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAgwHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:10:13.807Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "DoAnWeb_Nhom3.Tests.csproj",
+              "DocumentMoniker": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\DoAnWeb_Nhom3.Tests.csproj",
+              "RelativeDocumentMoniker": "TestProject\\DoAnWeb_Nhom3.Tests.csproj",
+              "ToolTip": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\DoAnWeb_Nhom3.Tests.csproj",
+              "RelativeToolTip": "TestProject\\DoAnWeb_Nhom3.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-27T17:09:11.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MSTestSettings.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\MSTestSettings.cs",
+              "DocumentMoniker": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\MSTestSettings.cs",
               "RelativeDocumentMoniker": "TestProject\\MSTestSettings.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FastFood_CSharp_Demo\\TestProject\\MSTestSettings.cs",
+              "ToolTip": "D:\\Study\\Testing\\FastFood_Shop_CSharp_Testing\\TestProject\\MSTestSettings.cs",
               "RelativeToolTip": "TestProject\\MSTestSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:01:39.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T17:01:39.572Z"
             }
           ]
         }
